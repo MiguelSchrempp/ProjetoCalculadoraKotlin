@@ -1,4 +1,4 @@
-import java.util.Scanner
+import java.util.*
 import kotlin.system.exitProcess
 
 fun soma(n1: Double, n2: Double): Any {
@@ -16,6 +16,7 @@ fun multiplicar(n1: Double, n2: Double): Any {
 fun dividir(n1: Double, n2: Double): Any {
     return n1 / n2
 }
+
 
 fun main() {
     while (true) {
