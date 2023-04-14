@@ -1,23 +1,9 @@
-import java.util.Scanner
+import java.util.*
 import kotlin.system.exitProcess
 
-fun soma(n1: Double, n2: Double): Any {
-    return n1 + n2
-}
-
-fun subtrair(n1: Double, n2: Double): Any {
-    return n1 - n2
-}
-
-fun multiplicar(n1: Double, n2: Double): Any {
-    return n1 * n2
-}
-
-fun dividir(n1: Double, n2: Double): Any {
-    return n1 / n2
-}
 
 fun main() {
+
     while (true) {
         val sc = Scanner(System.`in`)
         println("\n")
@@ -44,10 +30,10 @@ fun main() {
         val n2: Double = sc.nextDouble()
 
         when (op) {
-            1 -> println("A soma é: ${soma(n1, n2)} \n" + "-".repeat(50))
-            2 -> println("A subtração é: ${subtrair(n1, n2)} \n" + "-".repeat(50))
-            3 -> println("A multiplicação é: ${multiplicar(n1, n2)} \n" + "-".repeat(50))
-            4 -> println("A divisão é: ${dividir(n1, n2)} \n" + "-".repeat(50))
+            1 -> println("A soma é: ${Main2().soma(n1, n2)} \n" + "-".repeat(50))
+            2 -> println("A subtração é: ${Main2().subtrair(n1, n2)} \n" + "-".repeat(50))
+            3 -> println("A multiplicação é: ${Main2().multiplicar(n1, n2)} \n" + "-".repeat(50))
+            4 -> println("A divisão é: ${Main2().dividir(n1, n2)} \n" + "-".repeat(50))
             else -> println("Opção inválida")
         }
     }
