@@ -1,5 +1,7 @@
 plugins {
     kotlin("jvm") version "1.8.0"
+    id("org.jetbrains.kotlin.plugin.spring") version "1.8.0"
+    id("jacoco")
     application
 }
 
@@ -17,14 +19,18 @@ dependencies {
 
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-
 kotlin {
     jvmToolchain(11)
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("AppKt")
+}
+
+jacoco {
+    toolVersion = "0.8.7"
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
