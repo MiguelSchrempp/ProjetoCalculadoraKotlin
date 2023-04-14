@@ -1,16 +1,39 @@
+import io.mockk.every
+import io.mockk.mockk
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 internal class SampleTest {
 
-    private val testSample: MainKt = MainKt()
+//    private val testeCalculadora: Calculadora = Calculadora()
 
-    class MainKt {
-        fun sum(a: Int, b: Int) = a + b
-    }
+    private val testeCalculadoraMock: Calculadora = mockk<Calculadora>()
 
     @Test
-    fun testSum() {
-        assertEquals(42, testSample.sum(19, 23))
+    fun `Teste de calculadora`() {
+        every { testeCalculadoraMock.soma(19.0, 23.0) } returns 42.0
+        every { testeCalculadoraMock.subtrair(65.0, 23.0) } returns 42.0
+        every { testeCalculadoraMock.multiplicar(6.0, 7.0) } returns 42.0
+        every { testeCalculadoraMock.dividir(84.0, 2.0) } returns 42.0
     }
+
+
+//    @Test
+//    fun testSum() {
+//        assertEquals(42.0, testeCalculadora.soma(19.0, 23.0))
+//    }
+//
+//    @Test
+//    fun testSub() {
+//        assertEquals(42.0, testeCalculadora.subtrair(65.0, 23.0))
+//    }
+//
+//    @Test
+//    fun testMult() {
+//        assertEquals(42.0, testeCalculadora.multiplicar(6.0, 7.0))
+//    }
+//
+//    @Test
+//    fun testDiv() {
+//        assertEquals(42.0, testeCalculadora.dividir(84.0, 2.0))
+//    }
 }

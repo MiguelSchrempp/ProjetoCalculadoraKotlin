@@ -1,22 +1,6 @@
 import java.util.*
 import kotlin.system.exitProcess
 
-fun soma(n1: Double, n2: Double): Any {
-    return n1 + n2
-}
-
-fun subtrair(n1: Double, n2: Double): Any {
-    return n1 - n2
-}
-
-fun multiplicar(n1: Double, n2: Double): Any {
-    return n1 * n2
-}
-
-fun dividir(n1: Double, n2: Double): Any {
-    return n1 / n2
-}
-
 
 fun main() {
     while (true) {
@@ -45,10 +29,10 @@ fun main() {
         val n2: Double = sc.nextDouble()
 
         when (op) {
-            1 -> println("A soma é: ${soma(n1, n2)} \n" + "-".repeat(50))
-            2 -> println("A subtração é: ${subtrair(n1, n2)} \n" + "-".repeat(50))
-            3 -> println("A multiplicação é: ${multiplicar(n1, n2)} \n" + "-".repeat(50))
-            4 -> println("A divisão é: ${dividir(n1, n2)} \n" + "-".repeat(50))
+            1 -> println("A soma é: ${Calculadora().soma(n1, n2)} \n" + "-".repeat(50))
+            2 -> println("A subtração é: ${Calculadora().subtrair(n1, n2)} \n" + "-".repeat(50))
+            3 -> println("A multiplicação é: ${Calculadora().multiplicar(n1, n2)} \n" + "-".repeat(50))
+            4 -> println("A divisão é: ${Calculadora().dividir(n1, n2)} \n" + "-".repeat(50))
             else -> println("Opção inválida")
         }
     }

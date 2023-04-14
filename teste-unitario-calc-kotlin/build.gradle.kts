@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.testng:testng:7.1.0")
+    implementation("org.testng:testng:7.7.0")
     testImplementation(kotlin("test"))
     testImplementation("io.mockk:mockk:${1.9}")
 
